@@ -10,22 +10,22 @@
 </head>
 <body>
 <div class="container">
-    <h3 class="my-3">Monthly Loan Payment</h3>
+    <h3 class="my-3">Compound Interest</h3>
     <div class="d-grid gap-2 my-2">
-        <label for="loan-amount">Loan Amount ($)</label>
-        <input type="number" id="loan-amount" step="10000" min="0" max="100000000">
+        <label for="initial-amount">Initial Amount ($)</label>
+        <input type="number" id="initial-amount" step="10000" min="0" max="100000000">
     </div>
     <div class="d-grid gap-2 my-2">
         <label for="interest-rate">Interest Rate (%)</label>
         <input type="number" id="interest-rate" min="0" max="100">
     </div>
     <div class="d-grid gap-2 my-2">
-        <label for="loan-length">Loan Length (years)</label>
-        <input type="number" id="loan-length" min="0" max="1000">
+        <label for="compounding-time">Compounding Time (years)</label>
+        <input type="number" id="compounding-time" min="0" max="1000">
     </div>
     <div class="d-grid gap-2 my-2 mb-3" id="answer-div">
-        <label>Monthly Loan Payment</label>
-        <p id="answer-value" class="fw-bolder">2014.63</p>
+        <label>Final Value</label>
+        <p id="answer-value" class="fw-bolder">201444.63</p>
     </div>
     <div class="d-grid gap-2 my-2 mb-3">
         <button type="button" class="btn btn-info" id="calculate-button">Calculate</button>
@@ -35,7 +35,7 @@
     </div>
 </div>
 
-<script src="../static/js/loan.js"></script>
+<script src="../static/js/compound.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
 </body>
 </html>
