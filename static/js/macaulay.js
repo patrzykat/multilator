@@ -23,7 +23,24 @@ const verifyValues = (rate, lst1, lst2) => {
 }
 
 const getFinalValue = (interestRate, liabilityAmountArray, liabilityTimeArray) => {
-    return 45;
+
+    const discountRate = 1 / (1 + (interestRate/100));
+    const numberOfLiabilities = liabilityAmountArray.length;
+
+    let durationNumerator = 0;
+    for (let i=0; i<numberOfLiabilities; i++) {
+        durationNumerator += liabilityAmountArray[i] * liabilityTimeArray[i] * (discountRate ** liabilityTimeArray[i]);
+    }
+
+    let durationDenominator = 0;
+    for (let i=0; i<numberOfLiabilities; i++) {
+        durationDenominator += liabilityAmountArray[i] * (discountRate ** liabilityTimeArray[i]);
+    }
+
+    console.log(durationNumerator);
+    console.log(durationDenominator);
+
+    return durationNumerator / durationDenominator;
 }
 
 // Event Listeners
