@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bond Price</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h3 class="my-3">Bond Price</h3>
+    <div class="d-grid gap-2 my-2">
+        <label for="face-value">Face Value ($)</label>
+        <input type="number" id="face-value" step="10000" min="0" max="100000000">
+    </div>
+    <div class="d-grid gap-2 my-2">
+        <label for="coupon-rate">Coupon Rate (%)</label>
+        <input type="number" id="coupon-rate" step="1000" min="0" max="100">
+    </div>
+    <div class="d-grid gap-2 my-2">
+        <label for="interest-rate">Market Interest Rate (%)</label>
+        <input type="number" id="interest-rate" min="0" max="100">
+    </div>
+    <div class="d-grid gap-2 my-2">
+        <label for="bond-length">Bond Length (years)</label>
+        <input type="number" id="bond-length" min="0" max="100">
+    </div>
+    <div class="d-grid gap-2 my-2 mb-3" id="answer-div">
+        <label>Current Bond Price</label>
+        <p id="answer-value" class="fw-bolder">Not Enough Info</p>
+    </div>
+    <div class="d-grid gap-2 my-2 mb-3">
+        <button type="button" class="btn btn-info" id="calculate-button">Calculate</button>
+    </div>
+    <div class="d-grid gap-2 my-2">
+        <a href="popup.html" class="btn btn-secondary" type="button">Back To Home</a>
+    </div>
+</div>
+
+<script src="../static/js/bondprice.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>
