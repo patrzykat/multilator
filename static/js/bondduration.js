@@ -4,15 +4,20 @@ const answerValue = document.getElementById("answer-value");
 // Functions
 const getFinalValue = (interestRate, liabilityAmountArray, liabilityTimeArray) => {
 
-    const discountRate = 1 / (1 + (interestRate / 100));
+    const discountRate = 1 / (1 + (interestRate/100));
     const numberOfLiabilities = liabilityAmountArray.length;
 
-    let bondPrice = 0;
-    for (let i = 0; i < numberOfLiabilities; i++) {
-        bondPrice += liabilityAmountArray[i] * (discountRate ** liabilityTimeArray[i]);
+    let durationNumerator = 0;
+    for (let i=0; i<numberOfLiabilities; i++) {
+        durationNumerator += liabilityAmountArray[i] * liabilityTimeArray[i] * (discountRate ** liabilityTimeArray[i]);
     }
 
-    return bondPrice;
+    let durationDenominator = 0;
+    for (let i=0; i<numberOfLiabilities; i++) {
+        durationDenominator += liabilityAmountArray[i] * (discountRate ** liabilityTimeArray[i]);
+    }
+
+    return durationNumerator / durationDenominator;
 }
 
 // Event Listeners
@@ -27,10 +32,10 @@ calculateButton.addEventListener('click', () => {
     if (isNaN(interestRate) || isNaN(faceValue) || isNaN(couponRate) || isNaN(bondLength)) {
         answerValue.innerText = "Not Enough Info";
     } else {
-        const couponValue = faceValue * (couponRate/100);
+        const couponValue = faceValue * (couponRate / 100);
         const finalValue = faceValue + couponValue;
 
-        for (let i=1; i<bondLength+1; i++) {
+        for (let i = 1; i < bondLength + 1; i++) {
             liabilityTimeArray.push(i);
             if (i === bondLength) {
                 liabilityAmountArray.push(finalValue);

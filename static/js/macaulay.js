@@ -37,9 +37,6 @@ const getFinalValue = (interestRate, liabilityAmountArray, liabilityTimeArray) =
         durationDenominator += liabilityAmountArray[i] * (discountRate ** liabilityTimeArray[i]);
     }
 
-    console.log(durationNumerator);
-    console.log(durationDenominator);
-
     return durationNumerator / durationDenominator;
 }
 
