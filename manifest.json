@@ -3,7 +3,9 @@
   "description": "Financial Calculator",
   "version": "1.0",
   "manifest_version": 3,
+  "icons": {"128": "static/img/icon_128.png"},
   "action": {
+    "default_icon": "static/img/icon_19.png",
     "default_popup": "templates/popup.html"
   }
 }
