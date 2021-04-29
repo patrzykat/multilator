@@ -1,0 +1,70 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+body {
+    width: 300px;
+    font-family: myFirstFont;
+}
+
+h2 {
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 290px;
+    padding: 5px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=number] {
+    width: 280px;
+    padding: 5px;
+    margin: 5px 0 8px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container p {
+    width: 280px;
+    padding: 5px;
+    margin: 5px 0 8px 0;
+    border: none;
+    background: #c9e5f3;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 16px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#bottom-div {
+    margin-top: 15px;
+}
+
+#back-button {
+    position: absolute;
+    margin-left: 190px;
+}

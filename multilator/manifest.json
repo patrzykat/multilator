@@ -1,0 +1,14 @@
+{
+  "name": "Multilator",
+  "description": "Financial Calculator",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "templates/popup.html"
+  },
+  "icons": {
+    "16": "static/img/icon16.png",
+    "32": "static/img/icon32.png",
+    "128": "static/img/icon128.png"
+  }
+}

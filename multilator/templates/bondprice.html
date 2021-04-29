@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="form-container">
+    <h2>Bond Price Calculator</h2>
+
+    <label for="face-value"><b>Face Value ($)</b></label>
+    <input type="number" id="face-value">
+
+    <label for="coupon-rate"><b>Coupon Rate (%)</b></label>
+    <input type="number" id="coupon-rate">
+
+    <label for="interest-rate"><b>Interest Rate (%)</b></label>
+    <input type="number" id="interest-rate">
+
+    <label for="bond-length"><b>Bond Length (years)</b></label>
+    <input type="number" id="bond-length">
+
+    <label><b>Bond Price</b></label>
+    <p id="answer-value">Not Enough Info</p>
+
+    <div id="bottom-div">
+        <span>
+            <button type="button" id="calculate-button">Calculate</button>
+            <a id="back-button" href="popup.html">Back</a>
+        </span>
+    </div>
+</div>
+
+<script src="../static/js/bondprice.js"></script>
+</body>
+</html>
