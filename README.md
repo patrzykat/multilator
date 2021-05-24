@@ -1,5 +1,7 @@
 # Multilator
 
+Available on chrome web extension store (here)[https://chrome.google.com/webstore/detail/multilator/lfdaocojekbbbdkkpaoheddomfhdnlmj]
+
 ### Current Features
 - Loan Calculator
 - Compound Interest Calculator
